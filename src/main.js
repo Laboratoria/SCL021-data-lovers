@@ -10,8 +10,6 @@
 //     return Array.from(new Set([...allTeam, ...athletes.team]))//deberia retornar solo los paises sin repetirse 
 //   }, [])
 
-
-
 function botonPais(){
     paises
 }
@@ -28,15 +26,7 @@ document.getElementById("btnPais").onclick = function(){
 
 
   console.log(paises)
-  
-
-   
-
- 
- 
-
-  //console.log(newTeamAthletes)
-  
+    //console.log(newTeamAthletes) 
 
   teamAthletes.forEach(paises => {
      const clone = liTemplate.content.cloneNode(true)
