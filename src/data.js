@@ -1,9 +1,1 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+//escribir funciones de filtro (filtro por personajes y filtro por especie)
