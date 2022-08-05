@@ -18,11 +18,18 @@ function getCards(arrItems) {
     const card = document.createElement("div");
     const pName = document.createElement("p");
     pName.textContent = arrItems[i].name;
+    const pSpecies = document.createElement("p");
+    pSpecies.textContent = arrItems[i].species;
+
+    
+    
     const imagen = document.createElement("img");
     imagen.src = arrItems[i].image;
 
     card.appendChild(imagen);
     card.appendChild(pName);
+    card.appendChild(pSpecies);
+    
 
     arrCards.push(card);
   }
@@ -50,11 +57,31 @@ for (let especie of especies) {
 }
 //este for solo pinta los primeros 5 personajes para las cajas
 const arrCards = getCards(dataRickAndMorty);
-for (let e = 0; e < 5; e++) {
+for (let e = 0; e < 20; e++) {
 
   //selectorRoot.innerHTML += `<div>${dataRickAndMorty[e].name}</div>`;
   selectorRoot.appendChild(arrCards[e]);
 }
+
+selectorEspecies.addEventListener("change",function(){
+  console.log(selectorEspecies.value)
+  const dataFiltered = dataRickAndMorty.filter(function(character){
+    return character.species == selectorEspecies.value
+    
+  })
+  console.log (dataFiltered)
+  
+   
+
+})
+
+
+///////////////////////////////////////////////////////////////
+
+
+
+
+
 
 
 
