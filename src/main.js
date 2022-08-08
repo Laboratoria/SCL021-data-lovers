@@ -81,14 +81,6 @@ selectorEspecies.addEventListener("change", function () {
   print(dataFiltered);
  
 });
-///////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
 
 //crear los listener de los filtros selectores (personajes y especie)
 //con los valores seleccionados en el filtros realizar una funcion para el filtrado en base a los valores seleccionados
