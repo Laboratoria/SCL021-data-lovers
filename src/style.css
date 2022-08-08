@@ -1,40 +1,28 @@
+html{
+  margin: 0%;
+  padding: 0%;
+}
+
 
 .titulo{
-  text-align: center;
-}
-.card {
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
-  transition: 0.3s;
-  width: 20%;
+    text-align: center;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
-.container {
-  padding: 2px 16px;
-}
-
-.maincontainer{
+  .maincontainer{
 text-align: center;
+  }
+.character-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
 }
-
-.card-img-top-rick{
-width: 70%;
-padding-top: 30px;
+#boxCard{
+  text-align: center;
+  border: solid 2px black;
 }
-
-.card-title-morty{
-  padding-top: 50px;
-}
-
-
-
-.cardscontainer{
-display: flex;
-gap: 10px;
-flex-wrap: wrap;
-
-
+.name{
+  font-size: 20px;
+  font-weight: bolder;
 }
