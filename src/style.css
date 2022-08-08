@@ -1,3 +1,9 @@
+html{
+  margin: 0%;
+  padding: 0%;
+}
+
+
 .titulo{
     text-align: center;
 }
@@ -6,4 +12,17 @@
   .maincontainer{
 text-align: center;
   }
-
+.character-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#boxCard{
+  text-align: center;
+  border: solid 2px black;
+}
+.name{
+  font-size: 20px;
+  font-weight: bolder;
+}
