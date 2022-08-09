@@ -19,3 +19,14 @@
     right: 25% ;
 }  
 
+.divContainerAthletes{
+
+    border: 2px solid red;
+    margin: 2%;
+}
+
+.lists{
+
+    color: red;
+    font-size: 30px;
+}
