@@ -7,8 +7,15 @@
     } 
 
  body{
-    background: #1572A1;
+    background: #85caed;
     }
+
+.tituloUno{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    color: #5800FF;
+}
 
 .bandera{
     width: 50px;
@@ -19,6 +26,41 @@
     right: 25% ;
 }  
 
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.pNameAthletes{
+    color: rgb(233, 16, 175);
+    
+}
+
+.pTeamAthletes{
+    color: rgb(69, 239, 22);
+    
+}
+
+.pSportAthletes{
+    color: aliceblue;
+    
+
+}
+
+.pMedalAthletes{
+    color: greenyellow;
+    
+}
 .divContainerAthletes{
 
     border: 2px solid red;
