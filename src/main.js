@@ -12,13 +12,17 @@ const teamAthletes = data.athletes;//trae la base de datos de atlethes
 function listaPaises(lista) {
     divRoot.innerHTML = "";
     lista.forEach(paises => {
-        const divContainerAthletes = document.createElement("table");
+        const divContainerAthletes = document.createElement("div");
         divContainerAthletes.classList.add("divContainerAthletes");
         //crean las listas 
-        const pNameAthletes = document.createElement("p");
-        const pTeamAthletes = document.createElement("p");
-        const pSportAthletes = document.createElement("p");
-        const pMedalAthletes = document.createElement("p");
+        const pNameAthletes = document.createElement("list");
+        pNameAthletes.classList.add("pNameAthletes");
+        const pTeamAthletes = document.createElement("list");
+        pTeamAthletes.classList.add("pTeamAthletes");
+        const pSportAthletes = document.createElement("list");
+        pSportAthletes.classList.add("pSportAthletes");
+        const pMedalAthletes = document.createElement("list");
+        pMedalAthletes.classList.add("pMedalAthletes");
         const clone = liTemplate.content.cloneNode(true)
         //se le da el valor de la data
         pTeamAthletes.textContent = paises.team
@@ -36,10 +40,28 @@ function listaPaises(lista) {
 }
 listaPaises(teamAthletes);
 
+let country = "";
+let sport = "";
+let medal = "";
+
 function handleChange(event) {
-    //console.log(event.target.value)
-    const filterTeam = filterData(teamAthletes, event.target.value);
-    if (event.target.value === "Pais")
+    console.log(event.target.value)
+    if (event.target.name === "country"){
+        country=event.target.value
+    }
+    if (event.target.name === "sport"){
+        sport=event.target.value
+    }
+    if (event.target.name === "medal"){
+        medal=event.target.value
+    }
+    let filterTeam = filterData(teamAthletes, country);
+    console.log(filterTeam);
+    // filterTeam = filterData (filterTeam, sport);
+    // console.log(filterTeam);
+    // filterTeam = filterData (filterTeam, medal);
+    // console.log(filterTeam);
+    if (country === "Pais")
         listaPaises(teamAthletes);
     else
         listaPaises(filterTeam);
@@ -47,12 +69,12 @@ function handleChange(event) {
 
        // console.log(handleChange);
 
-    const filterSport = filterData(pSportAthletes, event.target.value);
+    // const filterSport = filterData(teamAthletes, event.target.value);
 
-     if (event.target.value === "Deporte")
-         listaPaises(teamAthletes);
-    else
-        listaPaises(filterSport);
+    //  if (event.target.value === "Deporte")
+    //      listaPaises(teamAthletes);
+    // else
+    //     listaPaises(filterSport);
 }
 
 
@@ -72,6 +94,8 @@ const select = document.getElementById('pais');
 select.addEventListener('change', handleChange);
 const selectSport = document.getElementById('deporte');
 selectSport.addEventListener('change', handleChange);
+const selectMedal = document.getElementById('medalla');
+selectMedal.addEventListener('change', handleChange);
 
 //funcion que hace un array con todos los paises de la DB sin repetirlos
 const prueba = teamAthletes.map(function (item) {
@@ -109,21 +133,23 @@ cargarDeporte();
 
 
 //funcion que hace un array con todas las medallas de la DB sin repetirlos
-const pruebaMedal = teamAthletes.map(function (item) {
+const pruebaMedalla = teamAthletes.map(function (item) {
     return item.medal
 })
-const medalla = Array.from(new Set([...pruebaMedal]))
-//console.log(paises)
+const medalla = Array.from(new Set([...pruebaMedalla]))
+console.log(medalla)
 
 //funcion para cargar las medallas en el boton select
-function cargarMedalla() {
-    const arrayMedalla = medalla;
-    arrayMedalla.sort();// Ordena el boton select alfabeticamente
-    for (const i in arrayMedalla) {
-        document.getElementById("medalla").innerHTML += "<option value='" + arrayMedalla[i] + "'>" + arrayMedalla[i] + "</option>";
-    }
-}
-cargarMedalla;
+ function cargarMedalla() {
+     const arrayMedalla = medalla;
+     arrayMedalla.sort();// Ordena el boton select alfabeticamente
+     for (const i in arrayMedalla) {
+         document.getElementById("medalla").innerHTML += "<option value='" + arrayMedalla[i] + "'>" + arrayMedalla[i] + "</option>";
+     }
+ }
+ cargarMedalla();
+
+
 
 
 
