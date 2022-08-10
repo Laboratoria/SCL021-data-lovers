@@ -1,28 +1,59 @@
-html{
+
+body {
+  background-image: url(/src/data/rickandmorty/fondo888.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+html {
   margin: 0%;
   padding: 0%;
 }
 
-
-.titulo{
-    text-align: center;
+.title {
+  text-align: center;
+}
+.maincontainer {
+  text-align: center;
 }
 
+.especies {
+  margin-bottom: 2%;
+  color: #c32ab8;
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: aliceblue;
+  border-radius: 15%;
+}
 
-  .maincontainer{
-text-align: center;
-  }
-.character-container{
+.character-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 6px;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #c32ab8;
 }
-#boxCard{
+#boxCard {
   text-align: center;
   border: solid 2px black;
 }
-.name{
+.name {
   font-size: 20px;
   font-weight: bolder;
+}
+.footer {
+  text-align: center;
+  border: 2px green solid;
+  background-color: chartreuse;
+}
+i {
+  color: black;
+}
+
+.created {
+  font-family: "Mouse Memoirs", sans-serif;
+  color: #c32ab8;
+  font-size: 35px;
 }
