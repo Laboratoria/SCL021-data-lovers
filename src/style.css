@@ -12,6 +12,12 @@ html{
   .maincontainer{
 text-align: center;
   }
+/* 
+con la propiedad de flexbox en el character container  ya queda responsive la pagina, 
+pero cuando le pongan las imagenes del banner es decir la imagen principal y todos
+los demas estilos, deben buscar la info de los "media queries", y ver los breakpoints 
+para que el estilo se adecue a las distintas pantallas */
+
 .character-container{
   display: flex;
   flex-direction: row;

@@ -1,13 +1,16 @@
-//import { example } from './data.js';
-
-import rickandmorty from "./data/rickandmorty/rickandmorty.js";
+import {datafilter,datafilteres} from './data.js';
 import data from "./data/rickandmorty/rickandmorty.js";
 
 //console.log(data.results);
 const dataRickAndMorty = data.results;
 const especies = new Set();
+const setGenero = new Set();
+
+
+
+
 //selectores de los filtros y de la seccion donde se van a pintar los personajes
-const selectorPersonajes = document.getElementById("personajes");
+const selectorGenero = document.getElementById("genero")
 const selectorEspecies = document.getElementById("especiess");
 const selectorRoot = document.getElementById("root");
 
@@ -49,8 +52,7 @@ function getCards(arrItems) {
 //este for pinta el selector de personajes
 for (var i = 0; i < dataRickAndMorty.length; i++) {
   especies.add(dataRickAndMorty[i].species);
-
-
+setGenero.add(dataRickAndMorty[i].gender);
 }
 //este for pinta el selector de especies
 for (let especie of especies) {
@@ -60,11 +62,18 @@ for (let especie of especies) {
    
 `;
 }
+
+for (let gener of setGenero) {
+selectorGenero.innerHTML += `
+
+<option>${gener}</option>
+`;
+}
 // idealmente que esto ocurra cuando hay evento onload
 function print(data){
-for (let e = 0; e < 5; e++) {
+for (let e = 0; e < 20; e++) {
   //selectorRoot.innerHTML += `<div>${dataRickAndMorty[e].name}</div>`;
-  selectorRoot.appendChild(getCards(data)[e]);
+  selectorRoot.appendChild (getCards(data)[e]) ;
 }
 }
 
@@ -74,13 +83,21 @@ selectorEspecies.addEventListener("change", function () {
   document.getElementById("root").innerHTML = ""
   //hacer que se impriman las nuevas
   //console.log(selectorEspecies.value);
-  let dataFiltered = dataRickAndMorty.filter(function (character) {
-    return character.species === selectorEspecies.value;
-  })
   //console.log
-  print(dataFiltered);
+  print(datafilter(dataRickAndMorty,selectorEspecies.value ));
  
 });
+
+selectorGenero.addEventListener("change", function () {
+  document.getElementById("root").innerHTML = ""
+  //hacer que se impriman las nuevas
+  //console.log(selectorEspecies.value);
+  //console.log
+  print(datafilteres(dataRickAndMorty,selectorGenero.value ));
+ 
+});
+
+
 
 //crear los listener de los filtros selectores (personajes y especie)
 //con los valores seleccionados en el filtros realizar una funcion para el filtrado en base a los valores seleccionados
