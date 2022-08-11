@@ -1,10 +1,13 @@
-import { datafilter } from "./data.js";
+import { filterData, datafilteres, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 //console.log(data.results);
 const dataRickAndMorty = data.results;
 const especies = new Set();
+const setGenero = new Set();
+
 //selectores de los filtros y de la seccion donde se van a pintar los personajes
+const selectorGenero = document.getElementById("genero");
 const selectorEspecies = document.getElementById("especiess");
 const selectorRoot = document.getElementById("root");
 
@@ -45,6 +48,7 @@ function getCards(arrItems) {
 //este for pinta el selector de personajes
 for (var i = 0; i < dataRickAndMorty.length; i++) {
   especies.add(dataRickAndMorty[i].species);
+  setGenero.add(dataRickAndMorty[i].gender);
 }
 //este for pinta el selector de especies
 for (let especie of especies) {
@@ -52,6 +56,13 @@ for (let especie of especies) {
 
       <option>${especie}</option>
    
+`;
+}
+
+for (let gener of setGenero) {
+  selectorGenero.innerHTML += `
+
+<option>${gener}</option>
 `;
 }
 // idealmente que esto ocurra cuando hay evento onload
@@ -72,8 +83,10 @@ selectorEspecies.addEventListener("change", function () {
   print(datafilter(dataRickAndMorty, selectorEspecies.value));
 });
 
-//crear los listener de los filtros selectores (personajes y especie)
-//con los valores seleccionados en el filtros realizar una funcion para el filtrado en base a los valores seleccionados
-//estas funciones deben estar en el datajs
-//console.log(especies)
-//console.log(dataRickAndMorty.length);
+selectorGenero.addEventListener("change", function () {
+  document.getElementById("root").innerHTML = "";
+  //hacer que se impriman las nuevas
+  //console.log(selectorEspecies.value);
+  //console.log
+  print(datafilteres(dataRickAndMorty, selectorGenero.value));
+});
