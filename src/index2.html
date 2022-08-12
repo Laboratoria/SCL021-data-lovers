@@ -13,54 +13,36 @@
 
     <select id="pais" name="country">
         <option>Pais</option>
-    </select>
-
-    <!-- <h1>Pais <svg data-cy="arrow-up" width="10" height="5" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-cy="arrow-up-path" d="M4 1.27146e-07L8 4L0 4L4 1.27146e-07Z" fill="#C4C4C4"></path></svg></h1> -->
+    </select>    
 
     <select id="deporte" name="sport">
         <option>Deporte</option>
     </select>
 
-    <select id="medalla" name="medal">
-        <option>Medalla</option>
-    </select>
-
     <section class="container flex text-center">
-        <div class="columna">
-            <h1>País</h1>
-        </div>
-        <div class="columna">
-            <h1>Nombre</h1>
-        </div>
-        <div class="columna">
-            <h1>Deporte</h1>
-        </div>
-        <div class="columna">
-            <h1>Medalla</h1>
-        </div>
+        <table>
+            <thead>
+             <tr>
+               <th>País</th>
+               <th>Nombre <button id="btnOrdenar">?</button></th>
+               <th>Deporte</th>
+               <th>Medalla</th>
+             </tr>
+            </thead>
+            <tbody id="medalsTable">
+           
+            </tbody>
+           </table>
+           
 
     </section>
 
     <ul id="root"></ul>
 
-    <div>
-        <template id="liTemplate">
-            <div class="list">
-                <b></b>
-                <span id="text-primary">Aqui va el pais</span>
-            </div>
-        </template>
-    </div>
+    
 
 
-    <div>
-        <template id="liTemplateNombres">
-            <div class="listDos">
-                <b></b>
-                <span id="text-primaryNombres">Aqui va el Nombre</span>
-            </div>
-        </template>
-    </div>
+   
 
 
     <script src="main.js" type="module"></script>
