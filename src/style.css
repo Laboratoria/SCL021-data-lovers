@@ -1,74 +1,89 @@
-.logo{
+.logo {
     width: 90%;
     height: 400px;
     position: relative;
     left: 5%;
     right: 5%;
-    } 
-
- body{
-    background: #85caed;
-    }
-
-.tituloUno{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    font-size: 300%;
-    color: #5800FF;
 }
 
-.bandera{
+body {
+    background: #85caed;
+}
+
+.tituloUno {
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 300%;
+    color: #3d41bd;
+}
+
+
+
+.bandera {
     width: 50px;
-    height: 100px;    
-    position: relative;    
-    margin-top: 20%;    
-    left: 25% ;
-    right: 25% ;
-}  
+    height: 100px;
+    position: relative;
+    margin-top: 20%;
+    left: 25%;
+    right: 25%;
+}
 
 
-.container{
+.container {
     margin: 0 auto;
     width: 90%;
 }
 
-.flex{
+.flex {
     display: flex;
     flex-wrap: wrap;
+    margi
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.pNameAthletes{
-    color: rgb(233, 16, 175);
-    
-}
-
-.pTeamAthletes{
-    color: rgb(69, 239, 22);
-    
-}
-
-.pSportAthletes{
-    color: aliceblue;
-    
+ /* .pNameAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+    text-align: left;
 
 }
 
-.pMedalAthletes{
-    color: greenyellow;
-    
+.pTeamAthletes {
+    color: black;
+    display: flex; 
+    padding: 1%;
+   
+
 }
-.divContainerAthletes{
+
+.pSportAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+  
+
+
+}
+
+.pMedalAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+
+} */
+
+/* .divContainerAthletes {
 
     border: 2px solid red;
-    margin: 2%;
+    display: flex;
 }
 
-.lists{
+.lists {
 
     color: red;
     font-size: 30px;
-}
+} */
