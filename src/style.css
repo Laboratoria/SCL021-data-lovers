@@ -17,8 +17,6 @@ body {
     color: #3d41bd;
 }
 
-
-
 .bandera {
     width: 50px;
     height: 100px;
@@ -44,46 +42,18 @@ body {
     text-align: center;
 }
 
- /* .pNameAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
+.pais{
     text-align: left;
-
 }
 
-.pTeamAthletes {
-    color: black;
-    display: flex; 
-    padding: 1%;
-   
-
+.nombre{
+    text-align: left;
 }
 
-.pSportAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
-  
-
-
+.deporte{
+    text-align: left;
 }
 
-.pMedalAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
-
-} */
-
-/* .divContainerAthletes {
-
-    border: 2px solid red;
-    display: flex;
+.medalla{
+    text-align: left;
 }
-
-.lists {
-
-    color: red;
-    font-size: 30px;
-} */

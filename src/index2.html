@@ -11,38 +11,46 @@
 
 <body>
 
+    <div>
+      <img class="logo" src="rio.png" alt="">
+    </div>
+
     <select id="pais" name="country">
         <option>Pais</option>
-    </select>    
+    </select>
 
     <select id="deporte" name="sport">
         <option>Deporte</option>
+    </select>
+
+    <select id="medalla" name="medal">
+      <option>Medalla</option>
     </select>
 
     <section class="container flex text-center">
         <table>
             <thead>
              <tr>
-               <th>País</th>
-               <th>Nombre <button id="btnOrdenar">?</button></th>
-               <th>Deporte</th>
-               <th>Medalla</th>
+               <th class="pais">País</th>
+               <th class="nombre">Nombre <button id="btnOrdenar">?</button></th>
+               <th class="deporte">Deporte</th>
+               <th class="medalla">Medalla</th>
              </tr>
             </thead>
             <tbody id="medalsTable">
-           
+
             </tbody>
            </table>
-           
+
 
     </section>
 
     <ul id="root"></ul>
 
-    
 
 
-   
+
+
 
 
     <script src="main.js" type="module"></script>
