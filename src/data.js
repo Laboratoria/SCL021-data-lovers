@@ -5,7 +5,7 @@ const filterData = (characters, species) => {
   return dataFiltered;
 };
 
-const datafilteres = (characters, gender) => {
+export const filtroGenero = (characters, gender) => {
   let dataFilter = characters.filter(function (character) {
     return character.gender === gender;
   });
@@ -25,6 +25,7 @@ const sortData = (Data,sortBy) => {
  return orderAZ;
  
 }
+
+
 export { sortData };
 export { filterData };
-export {datafilteres};

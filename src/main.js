@@ -1,11 +1,11 @@
-import { filterData, datafilteres, sortData } from "./data.js";
+import { filterData, filtroGenero, sortData } from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
 //console.log(data.results);
 const dataRickAndMorty = data.results;
-const especies = new Set();
-const setGenero = new Set();
-
+// eslint-disable-next-line no-use-before-define
+const especies = [];
+const setGenero = [];
 //selectores de los filtros y de la seccion donde se van a pintar los personajes
 const selectorGenero = document.getElementById("genero");
 const selectorEspecies = document.getElementById("especiess");
@@ -47,19 +47,20 @@ function getCards(arrItems) {
 
 //este for pinta el selector de personajes
 for (var i = 0; i < dataRickAndMorty.length; i++) {
-  especies.add(dataRickAndMorty[i].species);
-  setGenero.add(dataRickAndMorty[i].gender);
+  especies.push(dataRickAndMorty[i].species);
+  setGenero.push(dataRickAndMorty[i].gender);
 }
+const especiesOpciones = [...new Set(especies)];
 //este for pinta el selector de especies
-for (let especie of especies) {
+for (let especie of especiesOpciones) {
   selectorEspecies.innerHTML += `
 
       <option>${especie}</option>
    
 `;
 }
-
-for (let gener of setGenero) {
+const generosOpciones = [...new Set(setGenero)];
+for (let gener of generosOpciones) {
   selectorGenero.innerHTML += `
 
 <option>${gener}</option>
@@ -73,20 +74,30 @@ function print(data) {
   }
 }
 
-print(dataRickAndMorty);
+//print(dataRickAndMorty);
 
 selectorEspecies.addEventListener("change", function () {
   document.getElementById("root").innerHTML = "";
-  //hacer que se impriman las nuevas
-  //console.log(selectorEspecies.value);
-  //console.log
-  print(datafilter(dataRickAndMorty, selectorEspecies.value));
+  const dataFiltrada = filterData(dataRickAndMorty, selectorEspecies.value);
+  if (selectorGenero.value !== "generos") {
+    print(sortData(filtroGenero(dataFiltrada, selectorGenero.value),"name"));
+  }else{
+    print(sortData(dataFiltrada, "name"));
+  }
+
+  
 });
 
 selectorGenero.addEventListener("change", function () {
   document.getElementById("root").innerHTML = "";
   //hacer que se impriman las nuevas
-  //console.log(selectorEspecies.value);
-  //console.log
-  print(datafilteres(dataRickAndMorty, selectorGenero.value));
+  const dataFiltrada = filtroGenero(dataRickAndMorty, selectorGenero.value);
+
+  if (selectorEspecies.value !== "Especies") {
+  
+    print(sortData(filterData(dataFiltrada, selectorEspecies.value),"name"));
+  }else{
+    print(sortData(dataFiltrada, "name"));
+  }
+  
 });
