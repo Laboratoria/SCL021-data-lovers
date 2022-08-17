@@ -1,3 +1,22 @@
+main
+body {
+  background-image: url(/src/data/rickandmorty/fondo888.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+html {
+  margin: 0%;
+  padding: 0%;
+}
+/* Mobile */
+@media (max-width: 575px) {
+  .character-container  {
+    width: 100%;
+    padding-left: 20%;
+  }
+ 
+  img{
+width: 100%;
 
 body {
   background-image: url(/src/data/rickandmorty/fondo888.jpg);
@@ -18,6 +37,7 @@ html {
   img{
 width: 100%;
 
+ main
   }
 }
 .title {
