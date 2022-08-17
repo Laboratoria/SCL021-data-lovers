@@ -1,8 +1,13 @@
 {
   "env": {
+<main
     "browser": true,
     "es6":true
   
+=======
+    "browser": true, 
+    "es6": true
+ main
   },
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -10,7 +15,7 @@
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-console": "warn",
+    "no-console": "warn", 
     "import/extensions": 0
   }
 }
