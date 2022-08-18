@@ -1,7 +1,13 @@
 {
   "env": {
+<main
+    "browser": true,
+    "es6":true
+  
+=======
     "browser": true, 
     "es6": true
+ main
   },
   "parserOptions": {
     "ecmaVersion": 2018,
