@@ -7,25 +7,41 @@
 }
 
 body {
-    background: #85caed;
+    background: linear-gradient(to right, #7DEDFF, #FBFF00, #49FF00);
 }
 
-.tituloUno {
+.contenedorBandera {
+    display: inline-block;
+    text-align: center;
+}
+
+h1 {
     font-family: 'Comic Neue', cursive;
+    display: flex;
+    text-align: center;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 350%;
     color: #3d41bd;
 }
 
-.bandera {
-    width: 50px;
-    height: 100px;
-    position: relative;
-    margin-top: 20%;
-    left: 25%;
-    right: 25%;
+
+
+.bandera:hover {
+    height: 210px;
 }
 
+.bandera {
+    box-shadow: 10px 10px 10px 10px #8080809c;
+    border-radius: 200px;
+    height: 190px;
+
+}
+
+.contenedorBandera {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
 .container {
     margin: 0 auto;
@@ -35,25 +51,183 @@ body {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    margi
+
 }
 
 .text-center {
     text-align: center;
 }
 
-.pais{
-    text-align: left;
+#pais {
+    color: #000272;
+    background: whitesmoke;
+    width: 10%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 0.5%;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    left: 200px;
+
 }
 
-.nombre{
-    text-align: left;
+
+#deporte {
+    color: #000272;
+    background: whitesmoke;
+    width: 10%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 0.5%;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    left: 300px;
 }
 
-.deporte{
-    text-align: left;
+#medalla {
+    color: #000272;
+    background: whitesmoke;
+    width: 10%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 0.5%;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    left: 400px;
 }
 
-.medalla{
-    text-align: left;
+#order {
+    color: #000272;
+    background: whitesmoke;
+    width: 10%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 0.5%;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    left: 820px;
+
 }
+
+table {
+    position: relative;
+    top: 40px;
+    border-collapse: collapse;
+
+
+}
+
+/* thead{
+    
+    
+} */
+
+
+th {
+    /* position: sticky;
+    top: 0;  */
+    text-align: left;
+    font-size: 45px;
+    padding-right: 40px;
+    color: #5BB318;
+    width: 430px;
+}
+
+.paisLista {
+    position: relative;
+    top: 30px;
+    text-align: left;
+    color: #000272;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    /* border: 3px solid purple; */
+
+
+}
+
+.nombreLista {
+    position: relative;
+    top: 30px;
+    text-align: left;
+    color: #000272;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+    /* border: 3px solid purple; */
+}
+
+.deporteLista {
+    position: relative;
+    top: 30px;
+    text-align: left;
+    color: #000272;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+    /* border: 3px solid purple; */
+}
+
+.medallaLista {
+    position: relative;
+    top: 30px;
+    text-align: left;
+    color: #000272;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px;
+    /* border: 3px solid purple; */
+
+}
+
+/* .pNameAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+    text-align: left;
+
+}
+
+.pTeamAthletes {
+    color: black;
+    display: flex; 
+    padding: 1%;
+   
+
+}
+
+.pSportAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+  
+
+
+}
+
+.pMedalAthletes {
+    color: black;
+    display: flex;
+    padding: 1%;
+
+} */
+
+/* .divContainerAthletes {
+
+    border: 2px solid red;
+    display: flex;
+}
+
+.lists {
+
+    color: red;
+    font-size: 30px;
+} */
