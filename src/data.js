@@ -1,3 +1,4 @@
+//aca se crean las funciones  para exportarlos
 const filterData = (characters, species) => {
   let dataFiltered = characters.filter(function (character) {
     return character.species === species;
@@ -11,7 +12,8 @@ export const filtroGenero = (characters, gender) => {
   });
   return dataFilter;
 };
-
+//Cuando usamos el método sort(), los elementos se ordenarán en orden 
+//ascendente (de la A a la Z)
 const sortData = (Data,sortBy) => {
   let orderAZ = Data.sort(function (a, b) {
     if (a[sortBy] > b[sortBy]) {
