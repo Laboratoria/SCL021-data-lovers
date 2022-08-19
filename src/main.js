@@ -1,8 +1,5 @@
-//import { example } from './data.js';
 import data from './data/athletes/athletes.js';
 import { filterData } from './data.js';
-//import { sortDataUp } from './data.js';
-//  import {sortDataDown } from './data.js';
 
 const teamAthletes = data.athletes;//trae la base de datos de atlethes
 
@@ -27,9 +24,6 @@ function sortNameReverse(data, columna = "name") {
 
 }
 
-// function sortOrder(data, columna = "name") {
-//     return sortData
-// }
 
 //funcion de select ordenar
 function handleChangeOrder() {
@@ -37,7 +31,7 @@ function handleChangeOrder() {
     //console.log("hola");
 
     const selectName = document.getElementById('order').value;
-    //     //con ese valor comparar si tengo que ordenar ascendente o descendente
+    //con ese valor comparar si tengo que ordenar ascendente o descendente
     if (selectName === "order-up") {
         const ordenAZ = sortName(teamAthletes)
         showAthletes(ordenAZ)
@@ -46,11 +40,6 @@ function handleChangeOrder() {
         const ordenZA = sortNameReverse(teamAthletes)
         showAthletes(ordenZA)
     }
-    if (selectName === "totalOrder") {
-        const ordenNuevo = sortOrder(teamAthletes)
-        showAthletes(ordenNuevo)
-    }
-
 }
 
 const selectName = document.getElementById('order');
@@ -117,8 +106,6 @@ function handleChange(event) {
     }
 }
 
-
-
 //funcion que filtra al momento de seleccionar el pais en el listado
 const select = document.getElementById('pais');
 select.addEventListener('change', handleChange);
@@ -126,9 +113,6 @@ const selectSport = document.getElementById('deporte');
 selectSport.addEventListener('change', handleChange);
 const selectMedal = document.getElementById('medalla');
 selectMedal.addEventListener('change', handleChange);
-
-
-
 
 //funcion que hace un array con todos los paises de la DB sin repetirlos
 const prueba = teamAthletes.map(function (item) {

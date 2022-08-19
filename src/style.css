@@ -1,40 +1,33 @@
-.logo {
-    width: 90%;
-    height: 400px;
-    position: relative;
-    left: 5%;
-    right: 5%;
-}
-
 body {
     background: linear-gradient(to right, #7DEDFF, #FBFF00, #49FF00);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80%;
+    height: 300px;
+    position: relative;
+}
+
+footer {
+    background: linear-gradient(to right, #7DEDFF, rgb(9, 131, 56), #49FF00);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Estilos de la pagina principal (index1) */
+.container {
+    justify-content: center;
+    text-align: center;
 }
 
 .contenedorBandera {
     display: inline-block;
     text-align: center;
-}
-
-h1 {
-    font-family: 'Comic Neue', cursive;
-    display: flex;
-    text-align: center;
-    font-weight: bold;
-    font-size: 350%;
-    color: #3d41bd;
-}
-
-
-
-.bandera:hover {
-    height: 210px;
-}
-
-.bandera {
-    box-shadow: 10px 10px 10px 10px #8080809c;
-    border-radius: 200px;
-    height: 190px;
-
 }
 
 .contenedorBandera {
@@ -43,41 +36,56 @@ h1 {
     justify-content: center;
 }
 
-.container {
-    margin: 0 auto;
-    width: 90%;
+.bandera {
+    box-shadow: 10px 10px 10px 10px #8080809c;
+    border-radius: 200px;
+    height: 190px;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-
+.bandera:hover {
+    height: 210px;
 }
 
-.text-center {
+h1 {
+    font-family: 'Comic Neue', cursive;
+    align-items: center;
+    font-weight: bold;
+    font-size: 350%;
+    color: #3D41BD;
+}
+
+p {
+    color: #3D41BD;
+    font-size: 200%;
+    padding: 1px;
+    margin-top: 0;
+}
+
+/* Estilos de la segunda pagina (index2) */
+.select {
     text-align: center;
+    margin-top: 5px;
+    margin-left: 60px;
 }
 
 #pais {
     color: #000272;
     background: whitesmoke;
-    width: 10%;
+    width: 15%;
     height: 40px;
     font-size: 20px;
     font-weight: bold;
-    padding-left: 0.5%;
     border-radius: 15px;
     border: none;
     position: relative;
-    left: 200px;
+    text-align: left;
 
 }
-
 
 #deporte {
     color: #000272;
     background: whitesmoke;
-    width: 10%;
+    width: 15%;
     height: 40px;
     font-size: 20px;
     font-weight: bold;
@@ -85,13 +93,28 @@ h1 {
     border-radius: 15px;
     border: none;
     position: relative;
-    left: 300px;
+    text-align: left;
+
 }
 
 #medalla {
     color: #000272;
     background: whitesmoke;
-    width: 10%;
+    width: 15%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    text-align: left;
+
+}
+
+#order {
+    color: #000272;
+    background: whitesmoke;
+    width: 15%;
     height: 40px;
     font-size: 20px;
     font-weight: bold;
@@ -99,21 +122,7 @@ h1 {
     border-radius: 15px;
     border: none;
     position: relative;
-    left: 400px;
-}
-
-#order {
-    color: #000272;
-    background: whitesmoke;
-    width: 10%;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 0.5%;
-    border-radius: 15px;
-    border: none;
-    position: relative;
-    left: 820px;
+    text-align: left;
 
 }
 
@@ -121,113 +130,23 @@ table {
     position: relative;
     top: 40px;
     border-collapse: collapse;
-
-
 }
 
-/* thead{
-    
-    
-} */
-
-
 th {
-    /* position: sticky;
-    top: 0;  */
     text-align: left;
-    font-size: 45px;
+    font-size: 25pt;
     padding-right: 40px;
     color: #5BB318;
     width: 430px;
 }
 
-.paisLista {
+td {
     position: relative;
     top: 30px;
     text-align: left;
     color: #000272;
-    font-size: 30px;
+    font-size: 20pt;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
-    /* border: 3px solid purple; */
-
 
 }
-
-.nombreLista {
-    position: relative;
-    top: 30px;
-    text-align: left;
-    color: #000272;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1px;
-    /* border: 3px solid purple; */
-}
-
-.deporteLista {
-    position: relative;
-    top: 30px;
-    text-align: left;
-    color: #000272;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1px;
-    /* border: 3px solid purple; */
-}
-
-.medallaLista {
-    position: relative;
-    top: 30px;
-    text-align: left;
-    color: #000272;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1px;
-    /* border: 3px solid purple; */
-
-}
-
-/* .pNameAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
-    text-align: left;
-
-}
-
-.pTeamAthletes {
-    color: black;
-    display: flex; 
-    padding: 1%;
-   
-
-}
-
-.pSportAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
-  
-
-
-}
-
-.pMedalAthletes {
-    color: black;
-    display: flex;
-    padding: 1%;
-
-} */
-
-/* .divContainerAthletes {
-
-    border: 2px solid red;
-    display: flex;
-}
-
-.lists {
-
-    color: red;
-    font-size: 30px;
-} */

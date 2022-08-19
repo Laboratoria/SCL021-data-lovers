@@ -1,5 +1,3 @@
-// estas funciones son de ejemplo
-
 export const filterData = (data, country, sport, medal) => {
 
   return data.filter((element) => {
