@@ -3,6 +3,7 @@ import { filterData } from './data.js';
 
 const teamAthletes = data.athletes;//trae la base de datos de atlethes
 
+//funcion que hace que la data este ordenada el orden alfabetico por pais
 function sortData(data, columna = "team") {
     data.sort((a, b) => {
         return a[columna] < b[columna] ? -1 : 1;
@@ -42,22 +43,24 @@ function handleChangeOrder() {
     }
 }
 
+//se aplica la funcion
 const selectName = document.getElementById('order');
 selectName.addEventListener('change', handleChangeOrder);
-//     //console.log(handleChangeOrder);
+//console.log(handleChangeOrder);
 
 //funcion que muestra la DB en una tabla
 function showAthletes(lista) {
     let medalsTable = document.getElementById("medalsTable");
     let htmlmedals = "";
     lista.forEach(function (pais) {
+        //se crea un html dentro de JS, se empieza a crear nuestra tabla
         htmlmedals = htmlmedals + `
       <tr>
       
-      <td class="paisLista">${pais.team}</td>
-      <td class="nombreLista">${pais.name}</td>
-      <td class="deporteLista">${pais.sport}</td>
-      <td class="medallaLista">${pais.medal}</td>
+      <td>${pais.team}</td>
+      <td>${pais.name}</td>
+      <td>${pais.sport}</td>
+      <td>${pais.medal}</td>
       </tr>
       `
 
@@ -115,10 +118,10 @@ const selectMedal = document.getElementById('medalla');
 selectMedal.addEventListener('change', handleChange);
 
 //funcion que hace un array con todos los paises de la DB sin repetirlos
-const prueba = teamAthletes.map(function (item) {
+const pruebaCountry = teamAthletes.map(function (item) {
     return item.team
 })
-const paises = Array.from(new Set([...prueba]))
+const paises = Array.from(new Set([...pruebaCountry]))
 //console.log(paises)
 
 //funcion para cargar los paises en el boton select

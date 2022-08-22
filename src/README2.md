@@ -24,7 +24,7 @@ Hubo cambios en medio del proyecto por medio de feedback de nuestras compañeras
 En ese proyecto priorizamos que a cada filtro estuviera  funcionando y pasará los test.
      linter (`npm run pretest`)
      tests (`npm test`)
-  Hicimos las pruebas pertinentes y pasan
+  Hicimos las pruebas pertinentes y pasan en un 90%.
 # Consideraciones Finales
 Una gran oportunidad de desarrollar Life Skills y aprender a nuestro ritmo , como compañeras estuvimos siempre buscando la mejor manera de avanzar , cuidando de auto-cuidado y también iteramos muchas veces para quedar claro el camino, hicimos cambios significativos en **tercer sprint** con las imágenes que estábamos ocupando porque tuvimos el regalo de muchas de nuestras compañeras a darnos el feedback, cambiando el diseño de nuestra pagina , pero siempre siguiendo las historias de usuario.
 Sin dudas ganamos muchos conocimientos en este proyecto, tantos técnicos y para la vida .

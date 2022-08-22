@@ -28,9 +28,6 @@ footer {
 .contenedorBandera {
     display: inline-block;
     text-align: center;
-}
-
-.contenedorBandera {
     display: flex;
     width: 100%;
     justify-content: center;
